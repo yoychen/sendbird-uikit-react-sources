@@ -141,9 +141,9 @@ export interface OpenChannelProps {
   disableUserProfile?: boolean;
   fetchingParticipants: boolean;
   renderCustomMessage?: RenderCustomMessage;
-  renderUserProfile?(renderProps: { user: Sendbird.User }): JSX.Element;
-  renderChannelTitle?(renderProps: RenderOpenChannelTitleProps): JSX.Element;
-  renderMessageInput?(renderProps: RenderOpenChannelMessageInputProps): JSX.Element;
+  renderUserProfile?(renderProps: { user: Sendbird.User }): React.ReactNode;
+  renderChannelTitle?(renderProps: RenderOpenChannelTitleProps): React.ReactNode;
+  renderMessageInput?(renderProps: RenderOpenChannelMessageInputProps): React.ReactNode;
   onBeforeSendUserMessage?(text: string): Sendbird.UserMessageParams;
   onBeforeSendFileMessage?(file_: File): Sendbird.FileMessageParams;
   onChatHeaderActionClick?(): void;
